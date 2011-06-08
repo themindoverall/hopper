@@ -1,0 +1,3 @@
+[submodule "tween"]
+	path = tween
+	url = https://github.com/kikito/tween.lua.git
