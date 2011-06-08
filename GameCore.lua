@@ -14,7 +14,7 @@ function _GameCore:collide(obj)
   cols = {}
     
   for i, obj2 in ipairs(self.gameObjects) do
-    if obj ~= obj2 then 
+    if obj ~= obj2 and not obj2.dead then 
       local dx, dy, d
       dx = obj.pos.x - obj2.pos.x
       dy = obj.pos.y - obj2.pos.y

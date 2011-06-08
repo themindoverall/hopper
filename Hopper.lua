@@ -12,6 +12,8 @@ function Hopper:initialize()
   GameObject.initialize(self, opts)
   
   self.target = nil
+  self.score = 0
+  self.deltaScore = 0
 end
 
 function Hopper:update(dt)
@@ -33,5 +35,7 @@ function Hopper:update(dt)
   local cols = GameCore:collide(self)
   for i, cell in ipairs(cols) do
     cell.dead = true
+    self.score = self.score + 1
+    self.deltaScore = self.deltaScore + 1
   end
 end
